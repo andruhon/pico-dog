@@ -1,3 +1,5 @@
+# Circuit 
+
 I have two enclosed speakers, each of them has black and red wires.
 
 Amplifier has VCC, GND, ROUT+, ROUT-, LOUT+, LOUT- on one side 
@@ -9,4 +11,4 @@ and RIN, GND, LIN on another side.
 * GND from out side on Amplifier is connected to GND on Pico.
 * A buton connects 3V3(OUT) and GP12 on Pico.
 
-[Photo](dog-circuit.png)
+![Photo](dog-circuit.png)

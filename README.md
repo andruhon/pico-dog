@@ -9,7 +9,6 @@ Dog bark
 https://freesound.org/people/abhisheky948/sounds/625498/
 
 ## Installation
-Assuming that micropython is already installed to raspberry.
 
 ### Venv
 Created python venv with `python -m venv venv`
@@ -20,8 +19,11 @@ Activate environment with
 (venv) `python -m pip install -r requirements.txt`
 
 ### Dependencies
-This package uses https://github.com/joeky888/awesome-micropython-lib.git and git clone https://github.com/danjperron/PicoAudioPWM.git
+This package uses https://github.com/joeky888/awesome-micropython-lib.git and https://github.com/danjperron/PicoAudioPWM.git
 Do `git submodule init` and `git submodule update` to pull them.
+
+### Deploying to Pico
+Assuming that micropython is already installed to raspberry.
 
 See mpremote docs
 https://docs.micropython.org/en/latest/reference/mpremote.html
@@ -36,3 +38,4 @@ https://docs.micropython.org/en/latest/reference/mpremote.html
 (venv) `mpremote fs cp app.py :app.py + soft-reset`
 
 (venv) `mpremote ls` to make sure that everything is copied over
+(may need to actually restart the Pico, to pick up changes)
