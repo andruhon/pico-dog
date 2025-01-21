@@ -1,0 +1,6 @@
+[submodule "awesome-micropython-lib"]
+	path = awesome-micropython-lib
+	url = https://github.com/joeky888/awesome-micropython-lib.git
+[submodule "PicoAudioPWM"]
+	path = PicoAudioPWM
+	url = https://github.com/danjperron/PicoAudioPWM.git
