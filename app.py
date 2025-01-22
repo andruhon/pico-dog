@@ -6,21 +6,31 @@ from wavePlayer import wavePlayer
 #Setup the onboard LED Pin -
 LED = machine.Pin("LED", machine.Pin.OUT)
 
-Button = machine.Pin(12, machine.Pin.IN, machine.Pin.PULL_DOWN)
+PIRState = False
 
-def ButtonIRQHandler(pin):
-    if pin == Button:
-        LED.on()
-        print("led on!")
+PIR = machine.Pin(26, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
-        player = wavePlayer()
-        print("init player")
-        player.play("animal-dog-bark-01.wav")
-        print("played sound")
+def PirIRQHandler(pin):    
+    global PIRState
+    if pin == PIR:
+        if PIRState == True:
+            PIRState = False
+        else:
+            PIRState = True
 
-        LED.off()
-        print("led off")
+def bark():
+    player = wavePlayer()
+    print("init player")
+    player.play("animal-dog-bark-01.wav")
+    print("played sound")
 
-Button.irq(trigger = machine.Pin.IRQ_RISING, handler = ButtonIRQHandler)
+PIR.irq(trigger = machine.Pin.IRQ_RISING, handler = PirIRQHandler)
+
+while True:
+    LED.value(PIRState) # light onboard led for motion
+    if PIRState:
+        print("motion detected")
+        bark()
+        utime.sleep(1)
 
 
