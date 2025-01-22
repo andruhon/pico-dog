@@ -32,5 +32,3 @@ while True:
         print("motion detected")
         bark()
         utime.sleep(1)
-
-
