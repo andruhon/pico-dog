@@ -32,7 +32,7 @@ https://docs.micropython.org/en/latest/reference/mpremote.html
 
 (venv) `mpremote fs cp animal-dog-bark-01.wav :animal-dog-bark-01.wav`  
 (venv) `mpremote fs cp -r awesome-micropython-lib/Audio/*.py :`  
-(venv) `mpremote fs cp -r PicoAudioPWM*.py :`  
+(venv) `mpremote fs cp -r PicoAudioPWM/*.py :`  
 (recursive copy might not work well on windows, you may need to copy files individually)
 
 (venv) `mpremote fs cp app.py :app.py + soft-reset`
