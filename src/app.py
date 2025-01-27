@@ -1,5 +1,5 @@
 import machine
-import utime
+import time
 import os as uos
 from wavePlayer import wavePlayer
 
@@ -7,6 +7,7 @@ from wavePlayer import wavePlayer
 LED = machine.Pin("LED", machine.Pin.OUT)
 
 PIRState = False
+player = wavePlayer()
 
 PIR = machine.Pin(26, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
@@ -19,16 +20,20 @@ def PirIRQHandler(pin):
             PIRState = True
 
 def bark():
-    player = wavePlayer()
     print("init player")
-    player.play("animal-dog-bark-01.wav")
+    player.play("sounds/animal-dog-bark-01.wav")
     print("played sound")
 
 PIR.irq(trigger = machine.Pin.IRQ_RISING, handler = PirIRQHandler)
+
+LED.value(True)
+time.sleep(1)
+bark()
 
 while True:
     LED.value(PIRState) # light onboard led for motion
     if PIRState:
         print("motion detected")
         bark()
-        utime.sleep(1)
+        PIRState = False # clear state until next detection
+        time.sleep(3)

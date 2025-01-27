@@ -16,26 +16,38 @@ Created python venv with `python -m venv venv`
 Activate environment with
 `source venv/bin/activate`
 
-(venv) `python -m pip install -r requirements.txt`
+`python -m pip install -r requirements.txt`
 
 ### Dependencies
 This package uses https://github.com/joeky888/awesome-micropython-lib.git and https://github.com/danjperron/PicoAudioPWM.git
 Do `git submodule init` and `git submodule update` to pull them.
 
 ### Deploying to Pico
-Assuming that micropython is already installed to raspberry.
+Assuming that micropython is already installed to raspberry. Micropython installation instructions for Raspberry Pi Pico can be found at https://micropython.org/download/RPI_PICO/
+
+Connecting to raspberry on Linux may sometimes be challenging. Check [linux.md](linux.md)
 
 See mpremote docs
 https://docs.micropython.org/en/latest/reference/mpremote.html
 
-(venv) `mpremote fs cp main.py :main.py` (Only required once)  
+Install dependencies to pico:
+```
+mpremote mip install github:joeky888/awesome-micropython-lib/Audio/chunk.py
+mpremote mip install github:joeky888/awesome-micropython-lib/Audio/wave.py
+mpremote mip install github:danjperron/PicoAudioPWM/myDMA.py
+mpremote mip install github:danjperron/PicoAudioPWM/myPWM.py
+mpremote mip install github:danjperron/PicoAudioPWM/wavePlayer.py
+```
 
-(venv) `mpremote fs cp animal-dog-bark-01.wav :animal-dog-bark-01.wav`  
-(venv) `mpremote fs cp -r awesome-micropython-lib/Audio/*.py :`  
-(venv) `mpremote fs cp -r PicoAudioPWM/*.py :`  
-(recursive copy might not work well on windows, you may need to copy files individually)
+Copy sources to pico:
+```
+mpremote fs cp -r src/* :
+```
 
-(venv) `mpremote fs cp app.py :app.py + soft-reset`
-
-(venv) `mpremote ls` to make sure that everything is copied over
+`mpremote ls` to make sure that everything is copied over
 (may need to actually restart the Pico, to pick up changes)
+
+`mpremote df` to make sure some space left on pico.
+
+# Links
+https://lastminuteengineers.com/pir-sensor-arduino-tutorial/ - This is for Arduino, but explains how PIR sensor works very well.
