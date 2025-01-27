@@ -1,7 +1,7 @@
-import machine
+import machine # type: ignore
 import time
 import os as uos
-from wavePlayer import wavePlayer
+from wavePlayer import wavePlayer # type: ignore
 
 #Setup the onboard LED Pin -
 LED = machine.Pin("LED", machine.Pin.OUT)
