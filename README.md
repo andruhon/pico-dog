@@ -19,8 +19,7 @@ Activate environment with
 `python -m pip install -r requirements.txt`
 
 ### Dependencies
-This package uses https://github.com/joeky888/awesome-micropython-lib.git and https://github.com/danjperron/PicoAudioPWM.git
-Do `git submodule init` and `git submodule update` to pull them.
+This package uses https://github.com/joeky888/awesome-micropython-lib.git and https://github.com/danjperron/PicoAudioPWM.git.
 
 ### Deploying to Pico
 Assuming that micropython is already installed to raspberry. Micropython installation instructions for Raspberry Pi Pico can be found at https://micropython.org/download/RPI_PICO/
