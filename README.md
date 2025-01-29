@@ -1,5 +1,5 @@
 # Pico Dog
-Detects motion and plays the dob bark sound when it's dark.
+Detects motion and plays the dog bark sound when it's dark.
 
 See [materials.md](materials.md) for used materials.  
 See [circuit.md](circuit.md) for circuit details.
