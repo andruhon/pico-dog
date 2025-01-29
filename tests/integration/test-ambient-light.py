@@ -1,4 +1,4 @@
-from PiicoDev_VEML6030 import PiicoDev_VEML6030
+from PiicoDev_VEML6030 import PiicoDev_VEML6030 # type: ignore
 from time import sleep
 
 # Testing that PiicoDev Ambient Light Sensor VEML6030 works

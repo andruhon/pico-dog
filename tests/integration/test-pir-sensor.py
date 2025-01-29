@@ -27,3 +27,4 @@ while True:
     LED1.value(PIRState) # light onboard led for motion
     if PIRState:
         print("motion detected")
+        PIRState = False
