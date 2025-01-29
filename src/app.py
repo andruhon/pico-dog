@@ -26,7 +26,7 @@ def bark():
 
 def onMotionDetected():
     lightVal = light.read()
-    print("motion detected, light is", lightVal)
+    print("motion detected, light is", lightVal, "lux")
     if (lightVal < 10):
         bark()        
     else: 
