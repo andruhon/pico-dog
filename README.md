@@ -1,5 +1,5 @@
 # Pico Dog
-In future this is going to detect motion and bark. As of Jan 2025 it barks when button pressed.
+Detects motion and plays the dob bark sound when it's dark.
 
 See [materials.md](materials.md) for used materials.  
 See [circuit.md](circuit.md) for circuit details.
@@ -19,7 +19,11 @@ Activate environment with
 `python -m pip install -r requirements.txt`
 
 ### Dependencies
-This package uses https://github.com/joeky888/awesome-micropython-lib.git and https://github.com/danjperron/PicoAudioPWM.git.
+This package uses following packages as dependencies:
+* https://github.com/joeky888/awesome-micropython-lib.git
+* https://github.com/danjperron/PicoAudioPWM.git
+* https://github.com/CoreElectronics/CE-PiicoDev-Unified/blob/main/PiicoDev_Unified.py
+* https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module/blob/main/PiicoDev_VEML6030.py
 
 ### Deploying to Pico
 Assuming that micropython is already installed to raspberry. Micropython installation instructions for Raspberry Pi Pico can be found at https://micropython.org/download/RPI_PICO/
@@ -51,4 +55,5 @@ mpremote fs cp -r src/* :
 `mpremote df` to make sure some space left on pico.
 
 # Links
-https://lastminuteengineers.com/pir-sensor-arduino-tutorial/ - This is for Arduino, but explains how PIR sensor works very well.
+* https://lastminuteengineers.com/pir-sensor-arduino-tutorial/ - This is for Arduino, but explains how PIR sensor works very well.
+* https://core-electronics.com.au/guides/piicodev-ambient-light-sensor-veml6030-quickstart-guide-for-rpi-pico/ - light sonsor guide
