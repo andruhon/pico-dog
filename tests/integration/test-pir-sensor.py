@@ -9,15 +9,6 @@ LED1.on()
 sleep(3)
 LED1.off()
 
-# ADC worked detecting changes after tuning potentionmeters on pir a bit
-# adc = machine.ADC(machine.Pin(26))
-
-# while True:
-#     print(adc.read_u16())
-#     sleep(1)
-
-# LEDState1 = False
-
 PIRState = False
 
 PIR = machine.Pin(26, machine.Pin.IN, machine.Pin.PULL_DOWN)
