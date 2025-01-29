@@ -26,4 +26,6 @@ This is probably unnecessary with Pico. Seems to be working fine from
 VSYS. What was necessary is to tune both potentiometers counterclockwise quite a bit, otherwise it was giving false positives non-stop.
 See [test-pir-sensor.py](test-pir-sensor.py) for standalone sensor example.
 
+![Circuit](dog-circuit-kicad-20250130.png)
+
 ![Photo](dog-circuit-20250129.png)
