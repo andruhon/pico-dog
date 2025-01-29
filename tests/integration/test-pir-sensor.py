@@ -1,6 +1,8 @@
 from utime import sleep
 import machine
 
+# Test that PIR Infrared Motion Sensor (HC-SR501) works as expected
+
 print("Starting motion detection...")
 LED1 = machine.Pin("LED", machine.Pin.OUT)
 LED1.on()
