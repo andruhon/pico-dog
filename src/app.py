@@ -1,15 +1,14 @@
 import machine # type: ignore
 import time
-import os as uos
-from wavePlayer import wavePlayer # type: ignore
+from sound import sound
 from PiicoDev_VEML6030 import PiicoDev_VEML6030 # type: ignore
 
-#Setup the onboard LED Pin -
+#Setup the onboard LED Pin
 LED = machine.Pin("LED", machine.Pin.OUT)
+snd = sound();
 
 PIRState = False
 light = PiicoDev_VEML6030()
-player = wavePlayer()
 
 PIR = machine.Pin(26, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
@@ -21,7 +20,7 @@ def PirIRQHandler(pin):
 def bark():
     print("playing sound")
     LED.value(True)
-    player.play("sounds/animal-dog-bark-01.wav") 
+    snd.playLevel1()
     LED.value(False)
 
 def onMotionDetected():
