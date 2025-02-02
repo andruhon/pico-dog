@@ -7,6 +7,8 @@ and RIN, GND, LIN on another side.
 
 Raspberry Pico appears to be ordinary pico.
 
+![Circuit](dog-circuit-kicad-20250202.png)
+
 * Amplifier and Speakers
     * LIN and RIN of Amplifier are connected to GP2 and GP3 on Pico (likely to need filter, see below)
     * VCC of Amplifier is connected to 3V3(OUT) on Pico.
@@ -22,6 +24,7 @@ Raspberry Pico appears to be ordinary pico.
 # Amplifier high frequency howling
 The PicoAudioPWM uses PWM (Pulse width modulation) to produce sound. This means that the sound has some bearing frequency (122KHz in our case) and this base signal makes amplifier crazy making horrible howling and whistling sound. The easiest way to get rid of this howling is to add a filter between pico and amplifier.
 I ended up assembling a filter for 15KHz cutoff with 4.7nF capacitors (C1, C2) and 2K2Ω resistors (R1, R2). It seems to work really well so far. The filter drains higher frecuences to the ground. `C = 1/(2*π*R*f)` this formula can be used to determine components for desired frequency cut off.
+![filter](filter.png)
 
 # PIR Sensor
 There's a bit of information about how to run the sensor from 3.3 volts, and it will probably do with connecting 3V3OUT to H pin on the sensor.
@@ -29,7 +32,5 @@ There's a bit of information about how to run the sensor from 3.3 volts, and it 
 This is probably unnecessary with Pico. Seems to be working fine from 
 VSYS. What was necessary is to tune both potentiometers counterclockwise quite a bit, otherwise it was giving false positives non-stop.
 See [test-pir-sensor.py](test-pir-sensor.py) for standalone sensor example.
-
-![Circuit](dog-circuit-kicad-20250202.png)
 
 ![Photo](dog-circuit-20250129.png)
