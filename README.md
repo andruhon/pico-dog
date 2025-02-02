@@ -5,7 +5,7 @@ See [materials.md](materials.md) for used materials.
 See [circuit.md](circuit.md) for circuit details.
 
 ![Photo](dog-circuit-20250129.png)
-![Circuit](dog-circuit-kicad-20250130.png)
+![Circuit](dog-circuit-kicad-20250202.png)
 
 ## Audio sources
 Dog bark
