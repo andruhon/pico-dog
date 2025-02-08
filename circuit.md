@@ -16,7 +16,7 @@ Raspberry Pico appears to be ordinary pico.
     * GND from out side on Amplifier is connected to GND on Pico.
 * PIR Sensor (Pin labels are likely to be under plastic lens) **Don't forget to tune both potentiometers counterclockwise quite a bit, otherwise it is likely to give false positives continuously.**
     * VCC of Sensor is connected to VSYS (5V) on Pico
-    * OUT of Sensor is connected to GP26 on Pico
+    * OUT of Sensor is connected to GP27 on Pico
     * GND of Sensor is connected to GND on Pico
 * Ambient Light Sensor
     * Connected via PiicoDev LiPo Expansion Board
