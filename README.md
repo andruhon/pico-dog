@@ -4,8 +4,8 @@ Detects motion and plays the dog bark sound when it's dark.
 See [materials.md](materials.md) for used materials.  
 See [circuit.md](circuit.md) for circuit details.
 
-![Photo](dog-circuit-20250129.png)
-![Circuit](dog-circuit-kicad-20250202.png)
+![Photo](dog-circuit-20250208.png)
+![Circuit](dog-circuit-kicad-20250208.png)
 
 ## Audio sources
 Dog bark

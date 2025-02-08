@@ -10,7 +10,7 @@ snd = sound();
 PIRState = False
 light = PiicoDev_VEML6030()
 
-PIR = machine.Pin(26, machine.Pin.IN, machine.Pin.PULL_DOWN)
+PIR = machine.Pin(27, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
 def PirIRQHandler(pin):    
     global PIRState
