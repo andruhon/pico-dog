@@ -634,8 +634,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -13.97 27.94 0)
+			(property "Reference" "PicoDog"
+				(at 0 31.75 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -643,7 +643,7 @@
 				)
 			)
 			(property "Value" "Pico"
-				(at 0 19.05 0)
+				(at 0 29.21 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -677,16 +677,6 @@
 					(hide yes)
 				)
 			)
-			(symbol "Pico_0_0"
-				(text "Raspberry Pi"
-					(at 0 21.59 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(symbol "Pico_0_1"
 				(rectangle
 					(start -15.24 26.67)
@@ -697,6 +687,16 @@
 					)
 					(fill
 						(type background)
+					)
+				)
+			)
+			(symbol "Pico_1_0"
+				(text "Raspberry Pi Pico"
+					(at 0.254 19.304 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
 					)
 				)
 			)
