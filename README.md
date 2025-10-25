@@ -7,6 +7,8 @@ See [circuit.md](circuit.md) for circuit details.
 ![Photo](dog-circuit-20250208.png)
 ![Circuit](dog-circuit-kicad-20250208.png)
 
+Special halloween edition can be found at https://github.com/andruhon/pico-dog/tree/halloween-edition
+
 ## Audio sources
 Dog bark
 https://freesound.org/people/abhisheky948/sounds/625498/
@@ -56,6 +58,11 @@ mpremote fs cp -r src/* :
 (may need to actually restart the Pico, to pick up changes)
 
 `mpremote df` to make sure some space left on pico.
+
+## Custom sounds
+When using your own sounds make syre they are 16 bit with 16000 sample rate wav files. You can use Kwave open source editor to convert files.
+
+If you copied dodgy file and your Pico seems to be bricked - flash it ith official Raspberry memory reset https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory (flash_nuke.uf2)
 
 # Circuit
 
