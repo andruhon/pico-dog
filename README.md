@@ -1,45 +1,51 @@
 # Pico Dog
-Detects motion and plays the dog bark sound when it's dark.
 
-See [materials.md](materials.md) for used materials.  
+Detects motion and plays a dog bark sound when it's dark.
+
+**Special Halloween Edition:** https://github.com/andruhon/pico-dog/tree/halloween-edition
+
+See [materials.md](materials.md) for the list of materials used.  
 See [circuit.md](circuit.md) for circuit details.
 
 ![Photo](dog-circuit-20250208.png)
 ![Circuit](dog-circuit-kicad-20250208.png)
 
-Special halloween edition can be found at https://github.com/andruhon/pico-dog/tree/halloween-edition
+## Audio Sources
 
-## Audio sources
-Dog bark
-https://freesound.org/people/abhisheky948/sounds/625498/
+Dog bark sound:  
+[Dog Bark by abhisheky948](https://freesound.org/people/abhisheky948/sounds/625498/)
 
 ## Installation
 
-### Venv
-Created python venv with `python -m venv venv`
+### Development Environment (Optional)
 
-Activate environment with
-`source venv/bin/activate`
+If you need to work with the project files locally, you can create a Python virtual environment:
 
-`python -m pip install -r requirements.txt`
+```
+python -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements.txt
+```
 
 ### Dependencies
-This package uses following packages as dependencies:
+
+This package uses the following packages as dependencies:
 * https://github.com/joeky888/awesome-micropython-lib.git
 * https://github.com/danjperron/PicoAudioPWM.git
 * https://github.com/CoreElectronics/CE-PiicoDev-Unified/blob/main/PiicoDev_Unified.py
 * https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module/blob/main/PiicoDev_VEML6030.py
 
 ### Deploying to Pico
-Assuming that micropython is already installed to raspberry. Micropython installation instructions for Raspberry Pi Pico can be found at https://micropython.org/download/RPI_PICO/
 
-Connecting to raspberry on Linux may sometimes be challenging. Check [linux.md](linux.md)
+**Prerequisites:** MicroPython must already be installed on your Raspberry Pi Pico. Installation instructions can be found at https://micropython.org/download/RPI_PICO/
 
-See mpremote docs
-https://docs.micropython.org/en/latest/reference/mpremote.html
+**Note:** Connecting to Raspberry Pi Pico on Linux may sometimes be challenging. Check [linux.md](linux.md) for troubleshooting tips.
 
-Install dependencies to pico:
-```
+**mpremote documentation:** https://docs.micropython.org/en/latest/reference/mpremote.html
+
+Install dependencies to Pico:
+
+```bash
 mpremote mip install github:joeky888/awesome-micropython-lib/Audio/chunk.py
 mpremote mip install github:joeky888/awesome-micropython-lib/Audio/wave.py
 mpremote mip install github:danjperron/PicoAudioPWM/myDMA.py
@@ -49,23 +55,23 @@ mpremote mip install github:CoreElectronics/CE-PiicoDev-Unified/PiicoDev_Unified
 mpremote mip install github:CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module/PiicoDev_VEML6030.py
 ```
 
-Copy sources to pico:
-```
+Copy sources to Pico:
+
+```bash
 mpremote fs cp -r src/* :
 ```
 
-`mpremote ls` to make sure that everything is copied over
-(may need to actually restart the Pico, to pick up changes)
+Verify installation:
+- Run `mpremote ls` to make sure everything is copied over (you may need to restart the Pico to pick up changes)
+- Run `mpremote df` to check available space on the Pico
 
-`mpremote df` to make sure some space left on pico.
+## Custom Sounds
 
-## Custom sounds
-When using your own sounds make syre they are 16 bit with 16000 sample rate wav files. You can use Kwave open source editor to convert files.
+When using your own sounds, make sure they are **16-bit WAV files with a 16000 Hz sample rate**. You can use [Kwave](https://apps.kde.org/kwave/) (open source audio editor) to convert files.
 
-If you copied dodgy file and your Pico seems to be bricked - flash it ith official Raspberry memory reset https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory (flash_nuke.uf2)
+**Recovery:** If you copied a corrupted file and your Pico seems to be bricked, you can flash it with the official Raspberry Pi memory reset: [flash_nuke.uf2](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory)
 
-# Circuit
+## Links
 
-# Links
-* https://lastminuteengineers.com/pir-sensor-arduino-tutorial/ - This is for Arduino, but explains how PIR sensor works very well.
-* https://core-electronics.com.au/guides/piicodev-ambient-light-sensor-veml6030-quickstart-guide-for-rpi-pico/ - light sonsor guide
+* [PIR Sensor Tutorial](https://lastminuteengineers.com/pir-sensor-arduino-tutorial/) - Explains how PIR sensors work (Arduino-based but applicable)
+* [PiicoDev VEML6030 Guide](https://core-electronics.com.au/guides/piicodev-ambient-light-sensor-veml6030-quickstart-guide-for-rpi-pico/) - Light sensor quickstart guide
