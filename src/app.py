@@ -5,7 +5,7 @@ from PiicoDev_VEML6030 import PiicoDev_VEML6030 # type: ignore
 
 #Setup the onboard LED Pin
 LED = machine.Pin("LED", machine.Pin.OUT)
-snd = sound();
+snd = sound()
 
 PIRState = False
 light = PiicoDev_VEML6030()
@@ -24,12 +24,7 @@ def bark():
     LED.value(False)
 
 def onMotionDetected():
-    lightVal = light.read()
-    print("motion detected, light is", lightVal, "lux")
-    if (lightVal < 10):
-        bark()        
-    else: 
-        print("It's not dark, skipping")
+    bark()
     time.sleep(3)
 
 PIR.irq(trigger = machine.Pin.IRQ_RISING, handler = PirIRQHandler)

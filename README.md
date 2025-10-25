@@ -1,5 +1,5 @@
-# Pico Dog
-Detects motion and plays the dog bark sound when it's dark.
+# Pico Dog Halloween Edition
+Detects motion and plays the scary sound.
 
 See [materials.md](materials.md) for used materials.  
 See [circuit.md](circuit.md) for circuit details.
@@ -8,8 +8,11 @@ See [circuit.md](circuit.md) for circuit details.
 ![Circuit](dog-circuit-kicad-20250208.png)
 
 ## Audio sources
-Dog bark
-https://freesound.org/people/abhisheky948/sounds/625498/
+Zombie Growl 2 by tonsil5
+https://freesound.org/people/tonsil5/sounds/555415/
+
+Anxious Evil Laughter by amauri8BIT
+https://freesound.org/people/amauri8BIT/sounds/786074/
 
 ## Installation
 
@@ -56,6 +59,11 @@ mpremote fs cp -r src/* :
 (may need to actually restart the Pico, to pick up changes)
 
 `mpremote df` to make sure some space left on pico.
+
+## Custom sounds
+When using your own sounds make syre they are 16 bit with 16000 sample rate wav files. You can use Kwave open source editor to convert files.
+
+If you copied dodgy file and your Pico seems to be bricked - flash it ith official Raspberry memory reset https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory (flash_nuke.uf2)
 
 # Circuit
 
