@@ -1,14 +1,14 @@
 License Information
 ============================
 
-This repository uses two different licenses for our files — one for schemes and one for code.
+This repository uses two different licenses for our files — one for circuit schematics and one for code.
 
 Please note the repository pulls in source code from other repositories, most of them are MIT and Creative Commons, pleaser refer to README.md to find other repositories in use.
 
 Hardware and media
 ---------
 
-**Circuit schemes audio files are released under [Creative Commons Share-alike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/).**
+**Circuit schematics and audio files are released under [Creative Commons Share-alike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/).**
 
 Copyright of audio files belongs to their authors, please check links in README.md
 
