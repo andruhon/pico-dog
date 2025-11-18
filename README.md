@@ -4,7 +4,8 @@ Detects motion and plays a dog bark sound when it's dark.
 
 **Special Halloween Edition:** https://github.com/andruhon/pico-dog/tree/halloween-edition
 
-See [materials.md](materials.md) for the list of materials used.  
+See [PROJECT.md](PROJECT.md) for a detailed project writeup with build instructions and real-world performance notes.
+See [materials.md](materials.md) for the list of materials used.
 See [circuit.md](circuit.md) for circuit details.
 
 ![Photo](dog-circuit-20250208.png)
