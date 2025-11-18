@@ -13,7 +13,7 @@ See [circuit.md](circuit.md) for circuit details.
 ## Audio Sources
 
 Dog bark sound:  
-[Dog Bark by abhisheky948](https://freesound.org/people/abhisheky948/sounds/625498/)
+[Dog Bark by abhisheky948](https://freesound.org/people/abhisheky948/sounds/625498/) (Distributed under CC0 license)
 
 ## Installation
 
@@ -30,10 +30,10 @@ python -m pip install -r requirements.txt
 ### Dependencies
 
 This package uses the following packages as dependencies:
-* https://github.com/joeky888/awesome-micropython-lib.git
-* https://github.com/danjperron/PicoAudioPWM.git
 * https://github.com/CoreElectronics/CE-PiicoDev-Unified/blob/main/PiicoDev_Unified.py
 * https://github.com/CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module/blob/main/PiicoDev_VEML6030.py
+* https://github.com/joeky888/awesome-micropython-lib.git
+* https://github.com/danjperron/PicoAudioPWM.git
 
 ### Deploying to Pico
 
@@ -46,13 +46,13 @@ This package uses the following packages as dependencies:
 Install dependencies to Pico:
 
 ```bash
+mpremote mip install github:CoreElectronics/CE-PiicoDev-Unified/PiicoDev_Unified.py
+mpremote mip install github:CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module/PiicoDev_VEML6030.py
 mpremote mip install github:joeky888/awesome-micropython-lib/Audio/chunk.py
 mpremote mip install github:joeky888/awesome-micropython-lib/Audio/wave.py
 mpremote mip install github:danjperron/PicoAudioPWM/myDMA.py
 mpremote mip install github:danjperron/PicoAudioPWM/myPWM.py
 mpremote mip install github:danjperron/PicoAudioPWM/wavePlayer.py
-mpremote mip install github:CoreElectronics/CE-PiicoDev-Unified/PiicoDev_Unified.py
-mpremote mip install github:CoreElectronics/CE-PiicoDev-VEML6030-MicroPython-Module/PiicoDev_VEML6030.py
 ```
 
 Copy sources to Pico:
@@ -75,3 +75,9 @@ When using your own sounds, make sure they are **16-bit WAV files with a 16000 H
 
 * [PIR Sensor Tutorial](https://lastminuteengineers.com/pir-sensor-arduino-tutorial/) - Explains how PIR sensors work (Arduino-based but applicable)
 * [PiicoDev VEML6030 Guide](https://core-electronics.com.au/guides/piicodev-ambient-light-sensor-veml6030-quickstart-guide-for-rpi-pico/) - Light sensor quickstart guide
+
+## License
+
+This repository uses two different licenses for files — Creative Commons BY-SA 4.0 for circuit schematics and MIT for code.
+
+Please note the repository pulls in source code from other repositories, most of them are MIT and Creative Commons, pleaser refer to Dependencies section of this README to find other repositories in use.
