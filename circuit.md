@@ -7,7 +7,7 @@ and RIN, GND, LIN on another side.
 
 Raspberry Pico appears to be ordinary pico.
 
-![Circuit](dog-circuit-kicad-20250208.png)
+![Circuit](dog-circuit-kicad-20260207.png)
 
 * Amplifier and Speakers
     * LIN and RIN of Amplifier are connected to GP2 and GP3 on Pico (likely to need filter, see below)

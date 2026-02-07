@@ -15,7 +15,7 @@ Download all the code and circuit files at my GitHub here: https://github.com/an
 **Special Halloween Edition:** https://github.com/andruhon/pico-dog/tree/halloween-edition
 
 ![Photo](dog-circuit-20250208.png)
-![Circuit](dog-circuit-kicad-20250208.png)
+![Circuit](dog-circuit-kicad-20260207.png)
 
 ## How It Works
 
@@ -41,7 +41,7 @@ The light sensor ensures the system only activates at night. There's no point ba
 
 The circuit is straightforward, though there are a few tricks worth knowing.
 
-![Circuit](dog-circuit-kicad-20250208.png)
+![Circuit](dog-circuit-kicad-20260207.png)
 
 ### Amplifier and Speakers
 

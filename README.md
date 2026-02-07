@@ -8,7 +8,7 @@ See [materials.md](materials.md) for the list of materials used.
 See [circuit.md](circuit.md) for circuit details.
 
 ![Photo](dog-circuit-20250208.png)
-![Circuit](dog-circuit-kicad-20250208.png)
+![Circuit](dog-circuit-kicad-20260207.png)
 
 ## Audio Sources
 
