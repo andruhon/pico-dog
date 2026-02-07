@@ -79,6 +79,20 @@ The solution is a simple low-pass filter between the Pico and the amplifier. I a
 
 ![Photo](dog-circuit-20250208.png)
 
+## Enclosure
+
+The enclosure is a generic waterproof project box from a local DIY store. The most important consideration is that the lid is translucent, allowing the ambient light sensor to function properly without needing to be exposed to the elements.
+
+For the speakers, the casing needs some perforation to let sound through clearly. I simply drilled a number of holes with a hand drill on both sides of the enclosure – nothing fancy, but it works well.
+
+![Main unit deployed](pico-dog-main-casing-deployed.jpg)
+
+### PIR Sensor Housing
+
+The PIR sensor housing is a creative solution using two paint sampler jars. These are connected to the ceiling in such a way that they form a pan-tilt mechanism, allowing the PIR sensor to be pointed in almost any direction. This flexibility is crucial for getting the detection angle just right for your specific installation.
+
+![PIR sensor pan-tilt housing](pico-dog-pir-pan-tilt-casing.jpg)
+
 ## The Software
 
 The software runs on MicroPython and uses several excellent libraries:
